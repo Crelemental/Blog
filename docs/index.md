@@ -1,11 +1,7 @@
-# Obsidian Notes
+# Welcome to my blog and project space!
 
-Publish your public notes with MkDocs
-
-## Hello World!
-
-The `index.md` in the `/docs` folder is the homepage you see here.
-
-The folders in `/docs` appear as the main sections on the navigation bar.
-
-The notes appear as pages within these sections. For example, [[Note 1]] in `Topic 1`
+Here I will upload all the projects that I'm working on, as well as everything related to them!
+Hopefully I have something that might be interesting to you!
+Im always open to suggestions and to talk, so add me on discord or email me! 
+--Crelemental
+--nikitayakimny@gmail.com
