@@ -40,3 +40,7 @@ Now we have an active agent added to the Wazuh dashboard
 And now we have the Windows Server showing up as an active agent 
 ![[Pasted image 20240224133954.png]]
 (using the CLI would allow for mass deployment of Wazuh agents across a network using GPOs or something similar within a domain)
+
+**EDIT** To start the Wazuh server up after a restart or shutdown, use:
+`systemctl start wazuh-indexer`
+`systemctl start wazuh-dashboard`

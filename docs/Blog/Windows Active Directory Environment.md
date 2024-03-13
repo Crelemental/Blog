@@ -14,6 +14,7 @@ After that, these Virtual machines can be transformed into templates to make rap
 	Installed the domain controller in Windows Server 2022
 	![[Pasted image 20240128125327.png]]
 	selected AD domain services 
+	(the domain was renamed to dc1.local)
 	![[Pasted image 20240128125353.png]]
 	setup AD DS 
 	![[Pasted image 20240128125441.png]]
@@ -28,6 +29,13 @@ After that, these Virtual machines can be transformed into templates to make rap
 	![[Pasted image 20240128132125.png]]
 	Now the Windows 10 VM can join the domain with these credentials
 
+**EDIT** If the Windows 10 server isn't able to join the domain and or access the internet, do this. 
+	On the domain controller, go to DNS, choose the DNS server, and right click to properties
+	![[Pasted image 20240312231237.png]]
+	Next go to Forwarders and add the Google DNS servers as forwarders
+	![[Pasted image 20240312231316.png]]
+	This allows the domain controller to access the internet, and therefore any computer joined to that domain
+
 
 
 **Installed Windows 10 as a VM in Proxmox**
@@ -35,6 +43,7 @@ After that, these Virtual machines can be transformed into templates to make rap
 	![[Pasted image 20240128131002.png]]
 	![[Pasted image 20240128131040.png]]
 	`Set-DNSClientServerAddress -InterfaceIndex 20 -ServerAddresses 192.168.50.155`
+	**EDIT*** make sure that the only DNS server on the client computer is the DNS IP of the Domain Controller, otherwise it wont recognize the domain name. The client should get internet connectivity using the forwarders on the domain controller.
 	connect to Domain 
 	![[Pasted image 20240128130412.png]]
 	![[Pasted image 20240128130421.png]]
